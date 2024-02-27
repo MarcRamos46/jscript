@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgba(75, 75, 208, 0.885);
+            color: rgba(235, 178, 73, 0.877);
+            font: normal 15pt Arial;
+        }
+        h1 {
+            color: rgb(218, 218, 65);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script> //Área de script
+       var n1 = Number(window.prompt('Digite um número: ')) 
+       var n2 = Number(window.prompt('Digite outro número: ')) 
+       var s = n1 + n2
+       window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+       // (number + number) para adição => o + será usado como operador de soma
+       // (string + string) para concatenação => o + será usado para concatenar strings
+       // O comando/função window.prompt retorna uma string. Logo, para operações matemáticas, os dados precisam ser convertidos para numéricos (Number.parseInt ou Number.parseFloat, por exemplo) 
+    </script> 
+</body>
+</html>
