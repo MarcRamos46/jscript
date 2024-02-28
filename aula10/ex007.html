@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(210, 248, 248);
+        } 
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#tot {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores:</h1>
+    <input type="Number" name="txtn1" id="txtn1"> +
+    <input type="Number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="tot">Total</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1') //Poderia fazer: .querySelector('input#txtn1')
+            var tn2 = window.document.getElementById('txtn2') //Poderia fazer: .querySelector('input#txtn2')
+            var tot = window.document.getElementById('tot')
+            var n1 = Number(tn1.value)//conversão para numérico - Number()
+            var n2 = Number(tn2.value)//conversão para numérico - Number()
+            var s = n1 + n2
+            tot.innerHTML = `A soma de ${n1} mais ${n2} = <strong>${s}</strong>` //Lembrar de que o texto fica entre ` ` - duas crases
+        }
+    </script>
+    
+</body>
+</html>
