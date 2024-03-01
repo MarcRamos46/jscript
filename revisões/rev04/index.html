@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com a página</title>
+    <style>
+        body {
+            background-color: rgba(127, 255, 212, 0.486);
+            font: 13pt Arial;
+        }
+        button {
+            padding: 12px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Cadastro de pessoas</h1>
+    <button onclick="ação()">Cadastrar nova pessoa</button>
+    <div id="resultado">
+        <p>Pessoas que passaram por aqui:</p>
+    </div>
+    <script>
+        function ação() {
+            var nome = window.prompt('Nome da nova pessoa: ')
+            window.alert(`Vou cadastrar ${nome} logo abaixo.`)
+            var res = window.document.getElementById('resultado')
+            res.innerHTML += `<p>&#x1F596; Acabei de cadastrar <strong>${nome}</strong> no sistema.</p>`
+        }
+    </script>
+    
+</body>
+</html>
