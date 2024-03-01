@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Dobro e Metade</title>
+    <style>
+        body {
+            background-color: rgba(127, 255, 212, 0.522);
+            font: 12pt Arial;
+        }
+        
+        button {
+            background-color: rgba(235, 138, 103, 0.903);
+            font-size: 12pt;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.664);
+        }
+        
+        button:hover {
+            background-color: azure;
+        }
+        
+        div#saída {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com números</h1>
+    <h2>Calculando dobro (a x 2) e metade (a / 2):</h2>
+    
+    <button onclick="calcular()">Cálculo</button>
+    <button onclick="limpar()">Limpa</button>
+    
+    <div id="saída">
+        <h2>Resultados</h2>
+    </div>
+    
+    <script>
+        // Escopo global
+        //var sda = window.document.querySelector('div#saída')
+        var sda = window.document.getElementById('saída')
+        
+        function calcular() {
+            // Escopo local
+            var num = Number(window.prompt('Digite um número: '))
+            sda.innerHTML += `=> O dobro de ${num} é igual a <strong>${num*2}</strong> e a metade é igual a <strong>${num/2}</strong></br>`
+        }
+        function limpar() {
+            sda.innerHTML = '<h2>Resultados</h2>' 
+        }
+    </script>
+</body>
+</html>
