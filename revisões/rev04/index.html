@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interação com a página</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             background-color: rgba(127, 255, 212, 0.486);
@@ -27,7 +28,7 @@
             var nome = window.prompt('Nome da nova pessoa: ')
             window.alert(`Vou cadastrar ${nome} logo abaixo.`)
             var res = window.document.getElementById('resultado')
-            res.innerHTML += `<p>&#x1F596; Acabei de cadastrar <strong>${nome}</strong> no sistema.</p>`
+            res.innerHTML += `<p>&#x1F596; Pessoa cadastrada: <strong>${nome}</strong>.</p>`
         }
     </script>
     
