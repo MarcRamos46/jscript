@@ -7,23 +7,47 @@
     <style>
         body {
             font: normal 18pt Arial;
-            background-color: rgb(210, 248, 248);
+            background-image: url(wallpaper004.jpg);
         } 
         input {
             font: normal 18pt Arial;
-            width: 100px;
+            padding: 5px;
+            width: 170px;
         }
         div#tot {
+            margin-top: 15px;
+        }
+        div#resto {
+            margin-top: 15px;
+        }
+        div#produto {
             margin-top: 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Somando Valores:</h1>
+    <h1>Trabalhando com as quatro operações:</h1>
+    <h2>Soma</h2>
     <input type="Number" name="txtn1" id="txtn1"> +
     <input type="Number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
-    <div id="tot">Total</div>
+    <input type="button" value="SOMA" onclick="somar()">
+    <div id="tot">Resultado</div>
+
+    <h2>Subtração</h2>
+    <input type="Number" name="txtn3" id="txtn3"> -
+    <input type="Number" name="txtn4" id="txtn4">
+    <input type="button" value="SUBTRAI" onclick="subtrair()">
+    <div id="resto">Resultado</div>
+
+    <h2>Multiplicação</h2>
+    <input type="Number" name="txtn5" id="txtn5"> x
+    <input type="Number" name="txtn6" id="txtn6">
+    <input type="button" value="MULTIPLICA" onclick="multiplica()">
+    <div id="produto">Resultado</div>
+    <br>
+    <p> => Digite <strong>F5</strong> para limpar.</p>
+
+
     <script>
         function somar() {
             var tn1 = window.document.getElementById('txtn1') //Poderia fazer: .querySelector('input#txtn1')
@@ -31,8 +55,24 @@
             var tot = window.document.getElementById('tot')
             var n1 = Number(tn1.value)//conversão para numérico - Number()
             var n2 = Number(tn2.value)//conversão para numérico - Number()
-            var s = n1 + n2
-            tot.innerHTML = `A soma de ${n1} mais ${n2} = <strong>${s}</strong>` //Lembrar de que o texto fica entre ` ` - duas crases
+            tot.innerHTML = `A soma de ${n1} mais ${n2} = <strong>${n1 + n2}</strong>` //Lembrar de que o texto fica entre ` ` - duas crases
+        }
+        function subtrair () {
+            var tn3 = document.getElementById('txtn3')
+            var tn4 = document.getElementById('txtn4')
+            var res = document.getElementById('resto')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            res.innerHTML = `A diferença de ${n3} menos ${n4} = <strong>${n3 - n4}</strong>`
+
+        }
+        function multiplica () {
+            var tn5 = document.querySelector('input#txtn5')
+            var tn6 = document.querySelector('input#txtn6')
+            var prod = document.querySelector('div#produto')
+            var n5 = Number(tn5.value)
+            var n6 = Number(tn6.value)
+            prod.innerHTML = `O produto de ${n5} vezes ${n6} = <strong>${n5 * n6}</strong>`
         }
     </script>
     
