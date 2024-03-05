@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Testando condições simples</title>
+    <style>
+        body {
+            font: 12pt Arial;
+            background-color: rgba(127, 255, 212, 0.798);
+            min-width: 516px;
+        }
+
+        input {
+            height: 30px;
+            font-weight: bold;
+            padding-left: 5px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    Informe seu país de origem: <input type="text" name="país" id="país">
+    <input type="button" value="VERIFICAR" onclick="teste()">
+    <div id="res">Resultado</div>
+    <br>
+    <picture>
+        <source media="(max-width: 670px)" srcset="imperio1-pq.png">
+        <img src="bdgrande.jpg" alt="Brasil">
+    </picture>
+    
+    <script>
+        function teste() {
+            var txtpaís = window.document.getElementById('país')
+            var res = window.document.getElementById('res')
+            var p = txtpaís.value
+            res.innerHTML = `<p>Teu país de origem é <strong>${p}</p></strong>`
+
+            if (p.toUpperCase() == 'BRASIL') {
+                res.innerHTML = `<p>Você é <strong>BRASILEIRO</strong>. Parabéns!!</p>`
+            } else {
+                res.innerHTML = `<p>Você é <strong>ESTRANGEIRO</strong>. Seja bem vindo ao Brasil!!</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>
