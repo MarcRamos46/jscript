@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
+    <title>Adivinha o número</title>
     <style>
      body {
         font-family: sans-serif;
@@ -11,11 +11,19 @@
         width: 50%;
         max-width: 800px;
         min-width: 480px;
-        margin: 0 auto;
+        margin: 0 left;
+      }
+
+      p {
+        text-align: justify;
       }
       
       .form input[type="number"] {
         width: 200px;
+      }
+
+      .form input[type="submit"] {
+        font-weight: bold;
       }
 
       .lastResult {
@@ -26,14 +34,14 @@
 </head>
 
 <body>
-    <h1>Number guessing game</h1>
+    <h1>Adivinha o número</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>Selecionamos um número aleatório entre 1 e 100. Veja se consegues adivinhar em 10 tentativas ou menos. Diremos se o teu palpite foi muito alto ou muito baixo.</p>
 
     <div class="form">
-      <label for="guessField">Enter a guess: </label>
+      <label for="guessField">Palpite: </label>
       <input type="number" min="1" max="100" required id="guessField" class="guessField">
-      <input type="submit" value="Submit guess" class="guessSubmit">
+      <input type="submit" value="Enviar palpite" class="guessSubmit">
     </div>
 
     <div class="resultParas">
@@ -42,48 +50,6 @@
       <p class="lowOrHi"></p>
     </div>
 
-    <script>
-
-        var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-        var palpites = document.querySelector(".palpites");
-        var ultimoResultado = document.querySelector(".ultimoResultado");
-        var baixoOuAlto = document.querySelector(".baixoOuAlto");
-        var envioPalpite = document.querySelector(".envioPalpite");
-        var campoPalpite = document.querySelector(".campoPalpite");
-        var contagemPalpites = 1;
-        var botaoReinicio;
-
-        function conferirPalpite() {
-          
-          var palpiteUsuario = Number(campoPalpite.value);
-          if (contagemPalpites === 1) {
-            palpites.textContent = "Palpites anteriores: ";
-          }
-            
-          palpites.textContent += palpiteUsuario + " ";
-
-          if (palpiteUsuario === numeroAleatorio) {
-              ultimoResultado.textContent = "Parabéns! Você acertou!";
-              ultimoResultado.style.backgroundColor = "green";
-              baixoOuAlto.textContent = "";
-              configFimDeJogo();
-            } else if (contagemPalpites === 10) {
-              ultimoResultado.textContent = "!!!FIM DE JOGO!!!";
-              baixoOuAlto.textContent = "";
-              configFimDeJogo();
-          } else {
-              ultimoResultado.textContent = "Errado!";
-              ultimoResultado.style.backgroundColor = "red";
-              if (palpiteUsuario < numeroAleatorio) {
-                baixoOuAlto.textContent = "Seu palpite está muito baixo!";
-              } else if (palpiteUsuario > numeroAleatorio) {
-                baixoOuAlto.textContent = "Seu palpite está muito alto!";
-              }
-          }
-          contagemPalpites++;
-          campoPalpite.value = "";
-          campoPalpite.focus();
-        }
-    </script>
+    <script defer src="joguinho.js"></script>
 </body>
 </html>
