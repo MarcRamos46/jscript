@@ -4,6 +4,7 @@ function carregar () {
     var data = new Date() //Data da sistema
     var hora = data.getHours() //Hora do sistema
     msg.innerHTML = `Agora são ${hora} horas.` //Altera o contéudo da variável msg com a string entre as crases. A variável continha o que estava na div marcada pelo id="msg"
+    
     // Faz o conteúdo da var imagem mudar de acordo com os testes condicionais abaixo:
     if (hora >= 0 && hora < 5){
         //Boa madrugada
