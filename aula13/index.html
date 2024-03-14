@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições em JS</title>
+    <style>
+        body {
+            background-color: rgba(236, 188, 126, 0.932);
+            font: 13pt Arial;
+        }
+
+        section {
+            background-color: azure;
+            border: 5px solid black;
+            padding-left: 10px;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: normal;
+        }
+        
+        input {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        #txtn1, #txtn2 {
+            width: 90px
+        }
+        </style>
+</head>
+<body>
+    <h1>Repetições em JavaScript</h1>
+    <p>A estrutura <strong>While</strong> é classificada como estrutura de repetição com <strong>teste lógico no início</strong>.</p>
+    <p>A estrutura <strong>Do While</strong> é classificada como estrutura de repetição com<strong> teste lógico no final</strong>.</p>
+    
+    <section>
+        <h2>Laço While</h2>
+            <h3>Quantidade de iterações:</h3>
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="button" value="TESTE" onclick="enquanto()"> => <em>F5 para limpar.</em>
+            
+        
+        <h2>Laço Do While</h2>
+            <h3>Quantidade de iterações:</h3>
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="TESTE" onclick="facaEnquanto()"> => <em>F5 para limpar.</em>
+            
+    </section>
+    
+    <div id="res"></div>
+
+   <script src="ambiente.js"></script> 
+</body>
+</html>
