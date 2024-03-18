@@ -1,11 +1,11 @@
 console.log("Exercícios com o FOR:");
-console.log("Exibe apenas os números pares entre 1 e 20\n")
+console.log("Brincadeira do PIM\n")
 
-for (let c = 1; c <= 5; c ++) {
-    if (c % 2 == 0){
-        console.log(` => ${c} é PAR`);
+for (let c = 1; c <= 40; c ++) {
+    if (c % 4 != 0){
+        console.log(c);
     } else {
-        console.log("> pula <");
+        console.log("> PIM <");
 }
 }
 console.log("\nFim do Programa");
