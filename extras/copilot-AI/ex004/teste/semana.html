@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="js.ico" type="image/x-icon">
+    <title>Days of the week</title>
+    <style>
+        body {
+            min-width: fit-content;
+            background-image: linear-gradient(to right, skyblue, blue);
+            font: 13pt Arial;
+        }
+        
+        h2 {
+            font: normal 12pt Arial;
+        }
+        
+        input {
+            height: 30px;
+            width: 150px;
+            font-size: 12pt;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 10pt;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dias da semana</h1>
+    <h2><em>1. Programa que recebe um número de 1 a 7 e imprime na tela uma mensagem de acordo com o dia, sendo 1 para "Segunda", 2 para "Terça" etc.</em></h2> <br>
+    
+    Informe o número: <input type="number" name="number" id="txtnum">
+    <input type="button" value="VERIFICAR" onclick="semana()">
+    <button onclick="limpar()">LIMPAR ou F5 para atualizar</button>
+    
+    <div id="res"><strong>Resultado:</strong></div>
+
+    <script>
+        alert('Bem Vindo ao meu programinha!!')
+        function semana() {
+            let txtn = window.document.querySelector('input#txtnum')
+            let res = window.document.querySelector('div#res')
+            let dia = Number(txtn.value)
+            res.innerHTML = ` => O número informado foi <strong>${dia}</strong>.<br>`
+
+            switch (dia) {
+                case 1:
+                    res.innerHTML += "<strong>Segunda-feira</strong>: Hora de começar um nova semana!";
+                    break;
+                case 2:
+                     res.innerHTML += "<strong>Terça-feira: </strong>O dia está apenas começando!";
+                    break;
+                case 3:
+                     res.innerHTML += "<strong>Quarta-feira:</strong> Metade da semana já passou!";
+                    break;
+                case 4:
+                     res.innerHTML += "<strong>Quinta-feira:</strong> Quase chegando ao final!";
+                    break;
+                case 5:
+                     res.innerHTML += "<strong>Sexta-feira: </strong>O fim de semana está próximo!";
+                    break
+                case 6:
+                case 7:
+                     res.innerHTML += "<strong>Fim de semana</strong>: Aproveite o descanso!";
+                    break;
+                default:
+                     res.innerHTML += "Dia inválido!";
+            }
+        }
+
+        function limpar() {
+            res.innerHTML = ""
+        }       
+    </script>
+</body>
+</html>

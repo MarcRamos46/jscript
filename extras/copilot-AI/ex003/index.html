@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Médias</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, skyblue, blue);
+            font: 13pt Arial;
+        }
+        
+        h2 {
+            font: normal 12pt Arial;
+        }
+        
+        input {
+            height: 25px;
+            width: 150px;
+            font-size: 12pt;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Avaliação de Médias</h1>
+    <h2><em>1. Programa que avalia uma média (de 0 a 10.0) e mostra "Aprovado" se ela for maior ou igual a 6.0, e "Reprovado" caso contrário.</em></h2> <br>
+    
+    Média do aluno: <input type="number" name="number" id="txtmed">
+    <input type="button" value="VERIFICAR" onclick="calcular()">
+    <div id="res"><strong>Resultado</strong></div>
+
+    <script>
+        function calcular() {
+            let txtm = window.document.querySelector('input#txtmed')
+            let res = window.document.querySelector('div#res')
+            let média = Number(txtm.value)
+            res.innerHTML = ` => A média informada foi <strong>${média}</strong>.<br>`
+
+            if (média >= 6) {
+                res.innerHTML += `=> O aluno está <strong>aprovado.</strong>`
+            } else {
+                res.innerHTML += `=> O aluno está <strong>reprovado.</strong>`
+            }
+        }       
+
+    </script>
+</body>
+</html>

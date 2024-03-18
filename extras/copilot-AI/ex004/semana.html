@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="js.ico" type="image/x-icon">
+    <title>Days of the week</title>
+    <style>
+        body {
+            min-width: fit-content;
+            background-image: linear-gradient(to right, skyblue, blue);
+            font: 13pt Arial;
+        }
+        
+        h2 {
+            font: normal 12pt Arial;
+        }
+        
+        input {
+            height: 30px;
+            width: 150px;
+            font-size: 12pt;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 10pt;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dias da semana</h1>
+    <h2><em>1. Programa que recebe um número de 1 a 7 e imprime na tela o dia da semanda correspondente, sendo 1 para "Domingo", 2 para "Segunda-Feira" etc.</em></h2> <br>
+    
+    Informe o número: <input type="number" name="number" id="txtnum">
+    <input type="button" value="VERIFICAR" onclick="calcular()">
+    <button onclick="limpar()">LIMPAR ou F5 para atualizar</button>
+    
+    <div id="res"><strong>Resultado:</strong></div>
+
+    <script>
+        function calcular() {
+            let txtn = window.document.querySelector('input#txtnum')
+            let res = window.document.querySelector('div#res')
+            let dia = Number(txtn.value)
+            res.innerHTML = ` => O número informado foi <strong>${dia}</strong>.<br>`
+
+            if (dia == 1) {
+                res.innerHTML += `=> Dia correspondente: <strong>DOMINGO</strong>`
+            } else if (dia == 2) {
+                res.innerHTML += `=> Dia correspondente: <strong>Segunda-feira</strong>`
+            } else if (dia == 3) {
+                res.innerHTML += `=> Dia correspondente: <strong>Terça-feira</strong>`
+            } else if (dia == 4) {
+                res.innerHTML += `=> Dia correspondente: <strong>Quarta-feira</strong>`
+            } else if (dia == 5) {
+                res.innerHTML += `=> Dia correspondente: <strong>Quinta-feira</strong>`
+            } else if (dia == 6) {
+                res.innerHTML += `=> Dia correspondente: <strong>Sexta-feira</strong>`
+            } else if (dia == 7) {
+                res.innerHTML += `=> Dia correspondente: <strong>Sábado</strong>`
+            } else {
+                res.innerHTML += `<strong>[ERRO]</strong>: Não existe dia da semana correspondente.`
+            }
+        }
+        function limpar() {
+            res.innerHTML = ""
+        }       
+    </script>
+</body>
+</html>
