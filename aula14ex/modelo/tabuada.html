@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamos Contar</title>
+    <title>Tabuada</title>
+    <link rel="shortcut icon" href="js.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Tabuada</h1>
 
     </header>
     <!-------------------------------------->
     <section>
-        <div id="entrada">
-            <p>Início: <input type="number" name="txtn1" id="txtn1"> </p>
-            <p>Fim: <input type="number" name="txtn2" id="txtn2"></p> 
-            <p>Passo: <input type="number" name="txtn3" id="txtn3"> </p>
-            <p><input type="button" value="CONTAR" onclick="contar()" id="b1"></p>
+        
+        <div>
+            <p>
+                Número: <input type="number" name="txtn1" id="txtnúmero">
+                <input type="button" value="Gerar Tabuada" onclick="calcular()" id="b1">
+            </p>
         </div>
         
-        <div id="res"><p>Preparando a contagem</p></div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima:</option>
+            </select>    
+        </div>
 
     </section>
     <!---------------------------------------------->

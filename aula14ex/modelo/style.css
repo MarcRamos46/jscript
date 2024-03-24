@@ -22,12 +22,22 @@ section > div > p {
     font-weight: bold;
 }
 
+select {
+    border-color: black;
+    box-shadow: inset 1px 1px 2px black;
+}
+
+#txtnúmero {
+    height: 26px;
+
+}
+
 #b1 {
-    width: 100px;
-    height: 40px;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 1px 2px 2px black;
+    width: 170px;
+    height: 30px;
+    font-size: 1em;
+    font-weight: lighter;
+
 }
 footer {
     color: white;
