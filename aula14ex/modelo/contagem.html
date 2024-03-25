@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Vamos Contar!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Vamos Contar</h1>
 
     </header>
+    <!----------------------------------------------------------------------->
+
     <section>
-        <div id="msg">
-            Mensagem
+        <div>
+            <p class="pdiv">Início: <input type="number" name="ini" id="ini"></p>
+            <p class="pdiv">Fim: <input type="number" name="fim" id="fim"></p>
+            <p class="pdiv">passo: <input type="number" name="passo" id="passo"></p>
+            <p><input type="button" value="CONTAR" onclick="contar()"></p>
         </div>
-        <div id="foto">
-            <img id="imagem" src="ex014/foto-manha.png" alt="Foto dia">
+        <div id="res">
+            Preparando a contagem...
         </div>
 
     </section>
+    <!------------------------------------------------------------------------->
     <footer>
-        <p>&copy; Curso em vídeo</p>
-
+        <p>&copy; <a href="https://www.estudonauta.com/cursos/" target="_blank">Plataforma Estudonauta</a></p>
     </footer>
-    <script src="script.js"></script>
+    <!------------------------------------------------------------------------->
+    <script src="contagemjs.js"></script>
 </body>
 </html>

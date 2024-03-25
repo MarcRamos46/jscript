@@ -18,8 +18,8 @@ section {
 
 }
 
-section > div > p {
-    font-weight: bold;
+section > div > p.pdiv {
+    font-weight: lighter;
 }
 
 select {
@@ -30,6 +30,10 @@ select {
 #txtnúmero {
     height: 26px;
 
+}
+
+#res {
+    font-size: 12pt;
 }
 
 #b1 {
