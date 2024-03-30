@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Select</title>
+</head>
+<body>
+    <h1>Revisando o uso da tag Select</h1>
+
+    <p id="res"></p>
+    <div>
+        <select name="sel1" id="first">
+             <option>...</option>
+        </select>
+        <em>Clique na seta para ver.</em>
+    </div>
+    
+    <script>
+            let nome = window.prompt('Informa apenas teu primeiro nome:')
+            let num = Number(window.prompt('Digite um número de 1 a 15:'))
+            let sel = window.document.getElementById('first')
+            let resultado= window.document.getElementById('res')
+
+            if (num > 15) {
+                window.alert('Número inválido!! Atribuindo num = 15.')
+                num = 15
+            }
+            
+            let c = 1
+            sel.innerHTML = ''
+            resultado.innerHTML = `Seu nome aparecerá ${num} vezes.`
+            while(c <= num) {
+                let it_sel = document.createElement('option') //Criação dos elementos do select
+                it_sel.text = `${nome} => ${c}`
+                it_sel.value = `sel${c}` //Importante para php
+                sel.appendChild(it_sel) //Acrescenta os elementos a cada iteração
+                c++
+            }
+    </script>
+</body>
+</html>
